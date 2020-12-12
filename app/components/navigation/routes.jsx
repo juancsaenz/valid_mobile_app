@@ -1,5 +1,5 @@
 // Screens
-import MainScreen from '../../screens/main'
+import MainScreen from '../../screens/main';
 
 /**
  * @file routes.js

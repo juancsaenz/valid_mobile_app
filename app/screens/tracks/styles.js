@@ -17,8 +17,8 @@ import colors from '../../utils/theme/colors';
 const styles = StyleSheet.create({
   view: {
     flex: 1,
-    backgroundColor: colors.background
-  }
+    backgroundColor: colors.background,
+  },
 });
 
 export default styles;

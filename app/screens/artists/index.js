@@ -25,9 +25,7 @@ export const mapStateToProps = () => ({ });
  * @param dispatch - Run the  process to execute in the action
  * @returns { object }
  */
-export const mapDispatchToProps = (dispatch) => { 
-  return bindActionCreators(actions, dispatch);
-};
+export const mapDispatchToProps = (dispatch) => bindActionCreators(actions, dispatch);
 
 export default connect(
   mapStateToProps,

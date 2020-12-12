@@ -18,8 +18,8 @@ import View from './view';
  * Map state to props
  * @returns { object }
  */
-export const mapStateToProps = (state) => ({ 
-  fm: state.fm.track
+export const mapStateToProps = (state) => ({
+  fm: state.fm.track,
 });
 
 /**
@@ -27,9 +27,7 @@ export const mapStateToProps = (state) => ({
  * @param dispatch - Run the  process to execute in the action
  * @returns { object }
  */
-export const mapDispatchToProps = (dispatch) => { 
-  return bindActionCreators(actions, dispatch);
-};
+export const mapDispatchToProps = (dispatch) => bindActionCreators(actions, dispatch);
 
 export default connect(
   mapStateToProps,

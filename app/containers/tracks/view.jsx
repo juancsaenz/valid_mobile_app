@@ -7,7 +7,7 @@ import { View, ActivityIndicator, FlatList, RefreshControl } from 'react-native'
 import TrackItem from '../../components/artistItem';
 
 // Styles
-import colors from '../../utils/theme/colors'
+import colors from '../../utils/theme/colors';
 import styles from './styles';
 
 /**
@@ -42,12 +42,12 @@ export class TracksList extends React.PureComponent {
     this.loadData();
   }
 
-  componentDidUpdate(prevProps){
-    console.log('update', prevProps)
-    if(prevProps.fm !== this.props.fm){
+  componentDidUpdate(prevProps) {
+    const { fm } = this.props;
+    if (prevProps.fm !== fm) {
       this.handleDataChange();
     }
- }
+  }
 
   /**
    * Call service to load data
@@ -61,7 +61,6 @@ export class TracksList extends React.PureComponent {
         fetchGetTracks(page, this.handleDataChange);
       }
     });
-
   }
 
   /**
@@ -69,7 +68,6 @@ export class TracksList extends React.PureComponent {
    */
   handleDataChange = () => {
     const { fm: { track } } = this.props;
-console.log('track :>> ', track);
     const { fetchMore, data } = this.state;
     let newData = [];
 
@@ -138,7 +136,7 @@ console.log('track :>> ', track);
           style={styles.list}
           data={data}
           keyExtractor={(item) => item.mbid}
-          renderItem={({ item }) => (<TrackItem item={item} fromTrack/>)}
+          renderItem={({ item }) => (<TrackItem item={item} fromTrack />)}
           showsVerticalScrollIndicator={false}
           refreshControl={(
             <RefreshControl
@@ -161,6 +159,7 @@ console.log('track :>> ', track);
  */
 TracksList.propTypes = {
   fetchGetTracks: PropTypes.func.isRequired,
+  fm: PropTypes.string.isRequired,
 };
 
 export default TracksList;

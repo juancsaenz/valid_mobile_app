@@ -36,27 +36,27 @@ const defaultThemeColors = {
   shadowLightOverlay: [
     'rgba(255,255,255,0)',
     'rgba(255,255,255,0.9)',
-    'rgba(255,255,255,1)'
+    'rgba(255,255,255,1)',
   ],
   cancelOverlay: [
     'rgba(255, 216, 213, 1)',
-    'rgba(255,255,255,1)'
+    'rgba(255,255,255,1)',
   ],
   starOverlay: [
     'rgba(128, 207, 255, 0.9)',
-    'rgba(255,255,255,1)'
+    'rgba(255,255,255,1)',
   ],
   whiteLightOverlay: [
     'rgba(255,255,255,0)',
     'rgba(255,255,255,0.8)',
-    'rgba(255,255,255,1)'
+    'rgba(255,255,255,1)',
   ],
   whiteLightOverlayFull: [
     'rgba(255,255,255,0)',
     'rgba(255,255,255,0.9)',
-    'rgba(255,255,255,1)'
+    'rgba(255,255,255,1)',
   ],
-  transparent: 'rgba(0,0,0,0)'
+  transparent: 'rgba(0,0,0,0)',
 };
 
 export default { ...defaultThemeColors };

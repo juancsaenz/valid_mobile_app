@@ -6,7 +6,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 
 // Style
-import colors from '../../utils/theme/colors'
+import colors from '../../utils/theme/colors';
 
 // App routes
 import stackRoutes from './routes';

@@ -1,3 +1,4 @@
+/* eslint-disable react/forbid-prop-types */
 // Dependencies
 import React from 'react';
 import PropTypes from 'prop-types';
@@ -12,15 +13,14 @@ import styles from './styles';
  * @description Track Item component.
  */
 
-export function TrackItem({ item, fromTrack }) {
-  console.log('item :>> ', item);
+export function TrackItem({ item }) {
   const { name, listeners, image } = item;
   return (
     <View style={styles.view}>
       <View style={styles.item}>
         <Text>{name}</Text>
         <Text>{listeners}</Text>
-        <Image source={{ uri: image[3]['#text'] }} style={{ width: 40, height: 40 }}/>
+        <Image source={{ uri: image[3]['#text'] }} style={{ width: 40, height: 40 }} />
       </View>
     </View>
   );
@@ -35,7 +35,6 @@ TrackItem.propTypes = {
     listeners: PropTypes.string,
     image: PropTypes.array,
   }),
-  fromTrack: PropTypes.bool,
 };
 
 /**
@@ -47,7 +46,6 @@ TrackItem.defaultProps = {
     image: [],
     listeners: '',
   },
-  fromTrack: false,
 };
 
 export default TrackItem;

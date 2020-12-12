@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 // Dependencies
 import React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
@@ -24,14 +25,17 @@ export function MainView() {
     <View style={styles.view}>
       <Tab.Navigator>
         {routes.map((r) => (
-          <Tab.Screen key={r.name} options={{
-            tabBarLabel: r.label,
-            tabBarIcon: ({ color, size }) => (
-              <Icon name={r.icon} color={color} size={size} />
-            )
-          }}
-          {...r}
-          />))}
+          <Tab.Screen
+            key={r.name}
+            options={{
+              tabBarLabel: r.label,
+              tabBarIcon: ({ color, size }) => (
+                <Icon name={r.icon} color={color} size={size} />
+              ),
+            }}
+            {...r}
+          />
+        ))}
       </Tab.Navigator>
     </View>
   );

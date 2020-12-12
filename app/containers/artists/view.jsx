@@ -7,7 +7,7 @@ import { View, ActivityIndicator, FlatList, RefreshControl } from 'react-native'
 import ArtistItem from '../../components/artistItem';
 
 // Styles
-import colors from '../../utils/theme/colors'
+import colors from '../../utils/theme/colors';
 import styles from './styles';
 
 /**
@@ -42,26 +42,11 @@ export class ArtistsList extends React.PureComponent {
     this.loadData();
   }
 
-  componentDidUpdate(prevProps){
-    console.log('entro', prevProps)
-    if(prevProps.fm.fm !== this.props.fm.fm){
+  componentDidUpdate(prevProps) {
+    const { fm } = this.props;
+    if (prevProps.fm.fm !== fm.fm) {
       this.handleDataChange();
     }
- }
-
-  /**
-   * Call service to load data
-   */
-  loadData = () => {
-    const { fetchGetArtists } = this.props;
-    const { page } = this.state;
-
-    this.setState({ isFetching: true }, () => {
-      if (fetchGetArtists) {
-        fetchGetArtists(page, this.handleDataChange);
-      }
-    });
-
   }
 
   /**
@@ -86,6 +71,20 @@ export class ArtistsList extends React.PureComponent {
       canLoadMore: newData.length < fm.topartists['@attr'].total,
     });
   }
+
+/**
+ * Call service to load data
+ */
+loadData = () => {
+  const { fetchGetArtists } = this.props;
+  const { page } = this.state;
+
+  this.setState({ isFetching: true }, () => {
+    if (fetchGetArtists) {
+      fetchGetArtists(page, this.handleDataChange);
+    }
+  });
+}
 
   /**
    * Emit dispatch to update state and generate reload
@@ -160,6 +159,7 @@ export class ArtistsList extends React.PureComponent {
  */
 ArtistsList.propTypes = {
   fetchGetArtists: PropTypes.func.isRequired,
+  fm: PropTypes.string.isRequired,
 };
 
 export default ArtistsList;

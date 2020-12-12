@@ -1,3 +1,4 @@
+/* eslint-disable react/forbid-prop-types */
 // Dependencies
 import React from 'react';
 import PropTypes from 'prop-types';
@@ -17,7 +18,7 @@ export function ArtistItem({ item, fromTrack }) {
   return (
     <View style={styles.view}>
       <View style={styles.item}>
-        <Image source={{ uri: image[3]['#text'] }} style={styles.activityPic}/>
+        <Image source={{ uri: image[3]['#text'] }} style={styles.activityPic} />
         <View style={styles.contentInfo}>
           <Text style={styles.title}>{`Name: ${name}`}</Text>
           <Text>{`Listeners: ${listeners}`}</Text>
@@ -37,6 +38,8 @@ ArtistItem.propTypes = {
     name: PropTypes.string,
     listeners: PropTypes.string,
     image: PropTypes.array,
+    duration: PropTypes.string,
+    artist: PropTypes.string,
   }),
   fromTrack: PropTypes.bool,
 };
