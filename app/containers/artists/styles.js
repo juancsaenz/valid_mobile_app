@@ -13,23 +13,23 @@ import { StyleSheet } from 'react-native';
  */
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
+    flex: 1
   },
   hide: {
-    display: 'none',
+    display: 'none'
   },
   separator: {
-    height: 20,
+    height: 20
   },
   indicator: {
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
-    paddingHorizontal: 10,
+    paddingHorizontal: 10
   },
   list: {
-    flex: 1,
-  },
+    flex: 1
+  }
 });
 
 export default styles;

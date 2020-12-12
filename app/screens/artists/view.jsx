@@ -4,7 +4,7 @@ import React from 'react';
 import { View } from 'react-native';
 
 // Containers
-import ArtistsList from '../../containers/artists'
+import ArtistsList from '../../containers/artists';
 
 // Styles
 import styles from './styles';

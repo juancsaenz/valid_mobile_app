@@ -19,7 +19,7 @@ import View from './view';
  * @returns { object }
  */
 export const mapStateToProps = (state) => ({ 
-  fm: state.fm.track,
+  fm: state.fm.track
 });
 
 /**
@@ -29,7 +29,7 @@ export const mapStateToProps = (state) => ({
  */
 export const mapDispatchToProps = (dispatch) => { 
   return bindActionCreators(actions, dispatch);
- };
+};
 
 export default connect(
   mapStateToProps,

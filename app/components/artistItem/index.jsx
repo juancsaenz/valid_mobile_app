@@ -13,7 +13,6 @@ import styles from './styles';
  */
 
 export function ArtistItem({ item, fromTrack }) {
-  console.log('item :>> ', item);
   const { name, listeners, image, duration, artist } = item;
   return (
     <View style={styles.view}>

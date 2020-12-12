@@ -19,18 +19,18 @@ const styles = StyleSheet.create({
     width: 90,
     height: 110,
     borderTopLeftRadius: 10,
-    borderBottomLeftRadius: 10,
+    borderBottomLeftRadius: 10
   },
   view: {
     margin: 0,
     paddingTop: 10,
-    paddingHorizontal: 10,
+    paddingHorizontal: 10
   },
   contentInfo: {
     flex: 1,
     flexDirection: 'column',
     marginBottom: 10,
-    borderBottomWidth: 0,
+    borderBottomWidth: 0
   },
   item: {
     flex: 1,
@@ -42,64 +42,64 @@ const styles = StyleSheet.create({
     shadowColor: 'black',
     shadowOffset: {
       width: 0,
-      height: 2,
+      height: 2
     },
     shadowOpacity: 0.25,
     shadowRadius: 3.84,
     elevation: 2,
-    borderBottomWidth: 0,
+    borderBottomWidth: 0
   },
   itemContentRight: {
     flexDirection: 'row',
     justifyContent: 'space-between',
-    padding: 10,
+    padding: 10
   },
   userView: {
     flexDirection: 'row',
     alignItems: 'center',
-    borderBottomWidth: 0,
+    borderBottomWidth: 0
   },
   dateItem: {
     flexDirection: 'row',
-    alignItems: 'center',
+    alignItems: 'center'
   },
   userPic: {
     width: 46,
     height: 46,
     borderRadius: 33,
     marginRight: 8,
-    backgroundColor: colors.quinary2,
+    backgroundColor: colors.quinary2
   },
   userFullName: {
     color: colors.tertiary,
-    fontWeight: 'bold',
+    fontWeight: 'bold'
   },
   username: {
-    color: colors.quinary3,
+    color: colors.quinary3
   },
   time: {
     color: colors.quinary3,
     fontSize: 12,
     paddingTop: 8,
     paddingBottom: 3,
-    marginBottom: 20,
+    marginBottom: 20
   },
   contentDescription: {
-    flex: 1,
+    flex: 1
   },
   boxContentDescription: {
     borderBottomLeftRadius: 10,
-    borderTopLeftRadius: 10,
+    borderTopLeftRadius: 10
   },
   description: {
     color: colors.quinary3,
     paddingLeft: 12,
-    paddingRight: 10,
+    paddingRight: 10
   },
   mentionStyle: {
     color: colors.primary,
-    fontWeight: 'bold',
-  },
+    fontWeight: 'bold'
+  }
 });
 
 export default styles;

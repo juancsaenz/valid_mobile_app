@@ -18,15 +18,15 @@ const routes = [
     component: ArtistsScreen,
     lazy: true,
     label: 'Artists',
-    icon: "musical-notes-outline",
+    icon: 'musical-notes-outline'
   },
   {
     name: 'tracks',
     component: TracksScreen,
     lazy: true,
     label: 'Tracks',
-    icon: "headset-outline",
-  },
+    icon: 'headset-outline'
+  }
 ];
 
 export default routes;

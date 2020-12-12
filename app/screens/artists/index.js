@@ -27,7 +27,7 @@ export const mapStateToProps = () => ({ });
  */
 export const mapDispatchToProps = (dispatch) => { 
   return bindActionCreators(actions, dispatch);
- };
+};
 
 export default connect(
   mapStateToProps,

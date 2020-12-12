@@ -20,17 +20,23 @@ export const getTracks = (track, cb) => (
 export const fetchGetArtists = (page, cb) => {
   return (dispatch) => {
     apiGetArtists(page)
-      .then(res => 
-        {dispatch(getArtists(res, cb));})
-      .catch(res => {console.log(res);})
-  }
+      .then(res => {
+        dispatch(getArtists(res, cb));
+      })
+      .catch(res => {
+        console.log(res);
+      });
+  };
 };
 
 export const fetchGetTracks = (page, cb) => {
   return (dispatch) => {
     apiGetTracks(page)
-      .then(res => 
-        {dispatch(getTracks(res, cb));})
-      .catch(res => {console.log(res);})
-  }
+      .then(res => {
+        dispatch(getTracks(res, cb));
+      })
+      .catch(res => {
+        console.log(res);
+      });
+  };
 };

@@ -3,10 +3,9 @@ import React from 'react';
 import { Provider } from 'react-redux';
 import { Root } from 'native-base';
 import { View } from 'react-native';
-import { createStore, combineReducers } from "redux";
 
 // Components
-import AppNavigation from './components/navigation'
+import AppNavigation from './components/navigation';
 
 // Redux Store
 import store from './redux/store';
@@ -26,7 +25,7 @@ function App() {
     <Provider store={store}>
       <Root>
         <View style={{ flex: 1 }}>
-        <AppNavigation />
+          <AppNavigation />
         </View>
       </Root>
     </Provider>

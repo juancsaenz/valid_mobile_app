@@ -1,10 +1,10 @@
 // Dependencies
 import React from 'react';
 // import PropTypes from 'prop-types';
-import { View, Text } from 'react-native';
+import { View } from 'react-native';
 
 // Containers
-import TracksList from '../../containers/tracks'
+import TracksList from '../../containers/tracks';
 
 // Styles
 import styles from './styles';

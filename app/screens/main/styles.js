@@ -2,7 +2,7 @@
 import { StyleSheet } from 'react-native';
 
 // Styles
-import colors from '../../utils/theme/colors'
+import colors from '../../utils/theme/colors';
 
 /**
  * @file styles.js
@@ -17,7 +17,7 @@ import colors from '../../utils/theme/colors'
 const styles = StyleSheet.create({
   view: {
     flex: 1,
-    backgroundColor: colors.background,
+    backgroundColor: colors.background
   },
   overlay: {
     backgroundColor: colors.overlay,
@@ -26,8 +26,8 @@ const styles = StyleSheet.create({
     bottom: 0,
     left: 0,
     right: 0,
-    zIndex: 99,
-  },
+    zIndex: 99
+  }
 });
 
 export default styles;
