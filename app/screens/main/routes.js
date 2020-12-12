@@ -16,18 +16,16 @@ const routes = [
   {
     name: 'artists',
     component: ArtistsScreen,
-    options: {
-      tabBarLabel: 'Artists',
-      icon: 'home-outline',
-    },
+    lazy: true,
+    label: 'Artists',
+    icon: "musical-notes-outline",
   },
   {
     name: 'tracks',
     component: TracksScreen,
-    options: {
-      tabBarLabel: 'Tracks',
-      icon: 'md-camera-outline',
-    },
+    lazy: true,
+    label: 'Tracks',
+    icon: "headset-outline",
   },
 ];
 
