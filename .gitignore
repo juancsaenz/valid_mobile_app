@@ -57,3 +57,8 @@ buck-out/
 
 # CocoaPods
 /ios/Pods/
+
+# Unit testing
+coverage
+__snapshots__
+.scannerwork
