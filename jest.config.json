@@ -25,6 +25,9 @@
   ],
   "collectCoverageFrom": [
 	"app/**/*.{js,jsx,ts,tsx}",
-	"!app/App.jsx"
+	"!app/App.jsx",
+	"!app/lib/api.js",
+	"!app/components/navigation/*.{js,jsx}",
+	"!app/redux/store.js"
   ]
 }

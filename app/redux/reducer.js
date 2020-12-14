@@ -1,7 +1,7 @@
 // Constants
 import { GET_ARTISTS, GET_TRACKS } from './constants';
 
-const initialState = { fm: [] };
+export const initialState = { fm: [] };
 
 export default (state = initialState, action) => {
   switch (action.type) {

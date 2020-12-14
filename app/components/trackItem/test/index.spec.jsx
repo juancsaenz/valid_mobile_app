@@ -3,15 +3,15 @@ import React from 'react';
 import { shallow } from 'enzyme';
 
 // View
-import ArtistItem from '../index';
+import TrackItem from '../index';
 
 /**
  * @file index.spec.jsx
  * @author Camilo Sáenz
- * @description Test file for artist item.
+ * @description Test file for track item.
  */
 
-describe('ArtistItem', () => {
+describe('TrackItem', () => {
   let component;
 
   const props = {
@@ -51,7 +51,7 @@ describe('ArtistItem', () => {
   };
 
   beforeEach(() => {
-    component = shallow(<ArtistItem {...props} />);
+    component = shallow(<TrackItem {...props} />);
   });
 
   afterEach(() => {

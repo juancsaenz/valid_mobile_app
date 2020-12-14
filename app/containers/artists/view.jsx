@@ -2,7 +2,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { View, ActivityIndicator, FlatList, RefreshControl } from 'react-native';
-import NetInfo from '@react-native-community/netinfo';
 
 // Components
 import ArtistItem from '../../components/artistItem';
@@ -47,7 +46,6 @@ export class ArtistsList extends React.PureComponent {
     const { fm } = this.props;
     if (prevProps.fm.fm !== fm.fm) {
       this.handleDataChange();
-      NetInfo.addEventListener((state) => { console.log('state :>> ', state); });
     }
   }
 
@@ -74,19 +72,19 @@ export class ArtistsList extends React.PureComponent {
     });
   }
 
-/**
- * Call service to load data
- */
-loadData = () => {
-  const { fetchGetArtists } = this.props;
-  const { page } = this.state;
+  /**
+   * Call service to load data
+   */
+  loadData = () => {
+    const { fetchGetArtists } = this.props;
+    const { page } = this.state;
 
-  this.setState({ isFetching: true }, () => {
-    if (fetchGetArtists) {
-      fetchGetArtists(page, this.handleDataChange);
-    }
-  });
-}
+    this.setState({ isFetching: true }, () => {
+      if (fetchGetArtists) {
+        fetchGetArtists(page, this.handleDataChange);
+      }
+    });
+  }
 
   /**
    * Emit dispatch to update state and generate reload
